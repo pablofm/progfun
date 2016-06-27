@@ -51,4 +51,25 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("times works properly"){
+    val list_1 = List('a')
+    val list_2 = List('a', 'b')
+    val list_3 = List('a', 'a')
+    val list_4 = List('a', 'b', 'a')
+    val list_5 = List('a', 'a', 'a')
+
+    val result_list_1 = List(('a',1))
+    val result_list_2 = List(('a',1), ('b',1))
+    val result_list_3 = List(('a',2))
+    val result_list_4 = List(('a',2), ('b',1))
+    val result_list_5 = List(('a',3))
+
+    assert(times(list_1) === result_list_1)
+    assert(times(list_2) === result_list_2)
+    assert(times(list_3) === result_list_3)
+    assert(times(list_4) === result_list_4)
+    assert(times(list_5) === result_list_5)
+
+  }
+
 }
